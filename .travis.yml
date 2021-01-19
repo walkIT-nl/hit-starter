@@ -12,6 +12,6 @@ deploy:
   password:
     secure: WfnOxMVpXqLGiOKijJGDta5PpVES1msjfbW48lsbX7k1x3w8y+jakRK/vRQP4BZd2O1aqL2Hxg358/znFNQ94YeSG3V5jXhA4PdA1FELHkwwu8IVgdJI7c8flfJlob2SVlyB11g4tivNL6UIE7YGWbh2PjeRkIRWu9BzCuQZb3MmEiy7TdrYlljVxPU0/Kr6AzOX6CRE0FcFRun6P/xNJ/6sTJn+DwNvY7FeMQFBJZSY1gYnYLLhPgjzF3CzAwigHwC3zhGYs3ivC1sD/FOMuTXj/LF6+MwQLQxZxXlzTE03wd90oYTkdN+MEL1YJMZpstFGjv8+xIE8Q0DwEtlJCIc+BlHF8RZ6JHnytjCcsU5WSkw46mTJaGgakuQwH6cJ5WpsXmGCdbnY2ME9YOkveV+SYQDGxShGpdx9jWJiDAN2PsNpwLuT7Y8FsxRbehUPNT0Sklt59YSHArrTVOWicJMSYQEWRGxOyjf3Zpc4qAGqm16fwoHxx/iTSINUzVbtXiB3I+AfDeQnyTORacpK53jDcu9/kFDP+T1IhkfO7evPMA1no7UBs8Mau7fQz6EIZATqvpv2cTzWKaGPDGlQ3TNxlipmF1P6XgPqCcKGqXMMP/hJqsrAbIptZJj8SG0ecWgOYnFBLgW7OvPWdx9A0r3pvo8iKCYH61UlHdoLOJM=
   on:
-    branch: main
+    tags: true
     repo: walkIT-nl/hit-starter-on-fhir
     python: 3.8
