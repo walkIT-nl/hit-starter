@@ -16,6 +16,14 @@ class AuditOutcome:
     MAJOR_FAILURE = '12'
 
 
+class DicomAuditEventEntity:
+    AE_TITLE = CodingType(code='110119',
+                          system='http://dicom.nema.org/resources/ontology/DCM',
+                          display='Station AE Title')
+    STUDY_INSTANCE_UID = CodingType(code='110180', system='http://dicom.nema.org/resources/ontology/DCM',
+                                    display='Study Instance UID')
+
+
 class DicomAuditEventType:
     APPLICATION_ACTIVITY = CodingType(code='110100',
                                       system='http://dicom.nema.org/resources/ontology/DCM',
@@ -70,20 +78,16 @@ def create_dicom_study_audit_message(audit_info):
         what=Reference(
             identifier=IdentifierType(
                 value=audit_info.study_instance_uid,
-                type={'coding':
-                          [CodingType(code='110180',
-                                      system='http://dicom.nema.org/resources/ontology/DCM',
-                                      display="Study Instance UID")]})),
+                type={'coding': [DicomAuditEventEntity.STUDY_INSTANCE_UID]})),
         type=CodingType(code='2'), role=CodingType(code='3'),
         lifecycle=CodingType(code='1'))
     patient = AuditEventEntityType(
         what=Reference(
             identifier=IdentifierType(
                 value=audit_info.patient_id,
-                type={'coding':
-                          [CodingType(code='2',
-                                      system='RFC-3881',
-                                      display="Patient Number")]})),
+                type={'coding': [CodingType(code='2',
+                                            system='RFC-3881',
+                                            display="Patient Number")]})),
         type=CodingType(code='1'), role=CodingType(code='1'),
         lifecycle=CodingType(code='1'))
 
