@@ -2,7 +2,6 @@
 HIT Starter on FHIR
 ===================
 
-
 .. image:: https://img.shields.io/pypi/v/hit-starter-on-fhir.svg
         :target: https://pypi.python.org/pypi/hit-starter-on-fhir
 
@@ -14,10 +13,7 @@ HIT Starter on FHIR
         :alt: Documentation Status
 
 
-
-
- Health IT starter kit providing auditing, authn and authz using FHIR and OpenID Connect
-
+Health IT starter kit providing auditing, authn and authz using FHIR and OpenID Connect
 
 * Free software: MIT license
 * Documentation: https://hit-starter-on-fhir.readthedocs.io.
@@ -26,7 +22,7 @@ HIT Starter on FHIR
 Features
 --------
 
-* TODO
+* Audit client using FHIR AuditEvent
 
 Credits
 -------
