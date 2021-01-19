@@ -12,7 +12,7 @@ To install HIT Starter on FHIR, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install hit_starter_on_fhir
+    $ pip install hit-starter-on-fhir
 
 This is the preferred method to install HIT Starter on FHIR, as it will always install the most recent stable release.
 
@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/walkIT-nl/hit_starter_on_fhir
+    $ git clone git://github.com/walkIT-nl/hit-starter-on-fhir
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/walkIT-nl/hit_starter_on_fhir/tarball/master
+    $ curl -OJL https://github.com/walkIT-nl/hit-starter-on-fhir/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/walkIT-nl/hit_starter_on_fhir
-.. _tarball: https://github.com/walkIT-nl/hit_starter_on_fhir/tarball/master
+.. _Github repo: https://github.com/walkIT-nl/hit-starter-on-fhir
+.. _tarball: https://github.com/walkIT-nl/hit-starter-on-fhir/tarball/master

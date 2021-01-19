@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = hit_starter_on_fhir
+SPHINXPROJ    = fhir_starter
 SOURCEDIR     = .
 BUILDDIR      = _build
 
