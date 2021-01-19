@@ -1,17 +1,17 @@
 language: python
 python:
-- 3.8
-- 3.7
-- 3.6
+    - 3.8
+    - 3.7
+    - 3.6
 install: pip install -U tox-travis
 script: tox
 deploy:
-  provider: pypi
-  distributions: sdist bdist_wheel
-  user: walcovanloon
-  password:
-    secure: pM1CorbUXWBHKjm8f1bR9iboWPRi/j5bPZvPZi0muRIHkCHs5DdVjkDZV/gXCPSL42LmWr6EF4dq8CCQnIfeFzVvdpq7xp9hBhPNTUjBlhAJT+Go2YHVwL7IUHtYbjz2WJelWO3m7OXiZ4KYpk62QRkAZUZffsN/Ftc6auNI0W1OkK9jbvJITKj1357ZDZenrLe+7mOJqYOCVe1GXTSsClXz5JhgUldrh4xu3+bSbCyey2falceN+ajpzTTRitvi50QtkSy1fA4KCIXqrbvMw8Hr54/hEFtk0BbIVQgos+XXk5rE8HAza3/1dNXVs5N47gBtI8mpGBOjjvJcHfgXFogS+I8J5nXBO1h8XxDBfI6bRiN6hRYLzAGbsfI8AiHrebcALSuD2VRPTMevW2hZ9RpTJhWXgAhvvod9PWJdZLbEDCtZgeDMj7oFOo2Eaou9ZUXoChgZAsAUflyLbXbaLfgLdZK9RJIIRgHqgWtUxeHLPU525hcBLqENTvpyBAj/OL0K/uCz5l1KtsRpDCX4YmjL7UKfXlq6DHN0P41oCqy68h0d9Ge8iBy2fyfyqSlk2vAUEmCb3C0IsArnHhfzAf4ByhZ/8D5n7JgIHT0AWbsTa7mP0jDoBC7ivrXn82heaqf/sukg5Sy0shKCeCBxAn5oWfkG3ujGCp9F3cKhLh0=
-  on:
-    tags: true
-    repo: walkIT-nl/hit-starter-on-fhir
-    python: 3.8
+    provider: pypi
+    distributions: sdist bdist_wheel
+    user: walcovanloon
+    password:
+        secure: pM1CorbUXWBHKjm8f1bR9iboWPRi/j5bPZvPZi0muRIHkCHs5DdVjkDZV/gXCPSL42LmWr6EF4dq8CCQnIfeFzVvdpq7xp9hBhPNTUjBlhAJT+Go2YHVwL7IUHtYbjz2WJelWO3m7OXiZ4KYpk62QRkAZUZffsN/Ftc6auNI0W1OkK9jbvJITKj1357ZDZenrLe+7mOJqYOCVe1GXTSsClXz5JhgUldrh4xu3+bSbCyey2falceN+ajpzTTRitvi50QtkSy1fA4KCIXqrbvMw8Hr54/hEFtk0BbIVQgos+XXk5rE8HAza3/1dNXVs5N47gBtI8mpGBOjjvJcHfgXFogS+I8J5nXBO1h8XxDBfI6bRiN6hRYLzAGbsfI8AiHrebcALSuD2VRPTMevW2hZ9RpTJhWXgAhvvod9PWJdZLbEDCtZgeDMj7oFOo2Eaou9ZUXoChgZAsAUflyLbXbaLfgLdZK9RJIIRgHqgWtUxeHLPU525hcBLqENTvpyBAj/OL0K/uCz5l1KtsRpDCX4YmjL7UKfXlq6DHN0P41oCqy68h0d9Ge8iBy2fyfyqSlk2vAUEmCb3C0IsArnHhfzAf4ByhZ/8D5n7JgIHT0AWbsTa7mP0jDoBC7ivrXn82heaqf/sukg5Sy0shKCeCBxAn5oWfkG3ujGCp9F3cKhLh0=
+    on:
+        branch: main
+        repo: walkIT-nl/hit-starter-on-fhir
+        python: 3.8
