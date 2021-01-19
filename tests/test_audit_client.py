@@ -1,24 +1,18 @@
-#!/usr/bin/env python
+import responses
+from requests import Session
 
-"""Tests for `hit_starter_on_fhir` package."""
-
-import pytest
-
-
-from hit_starter_on_fhir import hit_starter_on_fhir
+from fhir_starter.audit_client import AuditClient
+from fhir_starter.audit_messages import DicomAuditEventType, AuditOutcome, AuditInfo
 
 
-@pytest.fixture
-def response():
-    """Sample pytest fixture.
+@responses.activate
+def test_log_dicom_transfer_should_post_audit_event_to_configured_endpoint():
+    target_url = 'http://localhost/fhir'
+    responses.add(method='POST', url=target_url)
 
-    See more at: http://doc.pytest.org/en/latest/fixture.html
-    """
-    # import requests
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
-
-
-def test_content(response):
-    """Sample pytest test function with the pytest fixture as an argument."""
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
+    audit_client = AuditClient(target_url, Session())
+    audit_client.log_dicom_study_event(
+        AuditInfo(type=DicomAuditEventType.INSTANCES_TRANSFERRED, outcome=AuditOutcome.SUCCESS,
+                  action='C', study_instance_uid='1.2.3',
+                  patient_id='patid',
+                  requesting_user='localsystem', source_system='Orthanc', receiver='pacs'))
