@@ -10,7 +10,7 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['requests', 'fhir-resources==6.0.0' ]
+requirements = ['requests', 'dataclasses', 'fhir.resources==6.0.0' ]
 
 setup_requirements = ['pytest-runner', ]
 
