@@ -1,8 +1,8 @@
 """Audit events for DICOM"""
 
 import datetime
+from dataclasses import dataclass
 
-from attr import dataclass
 from fhir.resources.auditevent import AuditEvent
 from fhir.resources.fhirtypes import CodingType, AuditEventSourceType, IdentifierType, AuditEventAgentType, \
     AuditEventEntityType
