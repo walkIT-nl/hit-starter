@@ -15,4 +15,4 @@ class AuditClient:
         self._post(audit_messages.create_dicom_study_audit_message(audit_info))
 
     def _post(self, message):
-        self.session.post(self.fhir_base_url, json=message)
+        self.session.post(self.fhir_base_url, data=message, headers={'Content-Type': 'application/json'})
